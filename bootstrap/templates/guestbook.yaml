@@ -1,3 +1,5 @@
+{{- range $.Values.servers }}
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -8,9 +10,10 @@ metadata:
 spec:
   destination:
     namespace: argocd
-    server: {{ .Values.spec.destination.server }}
+    server: {{ . | quote }}
   project: default
   source:
     path: guestbook
     repoURL: https://github.com/argoproj/argocd-example-apps
     targetRevision: HEAD
+{{- end }}

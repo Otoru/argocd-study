@@ -1,0 +1,8 @@
+servers: 
+  - https://kubernetes.default.svc
+
+secrets:
+  path: external-secrets/deploy/charts/external-secrets
+  repoURL: https://github.com/external-secrets/external-secrets.git
+  targetRevision: v0.9.19
+    

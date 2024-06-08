@@ -1,0 +1,5 @@
+apiVersion: v2
+name: operators
+description: Chart for install operators in the cluster
+type: application
+version: 0.1.0
